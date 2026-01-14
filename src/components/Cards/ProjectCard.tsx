@@ -13,7 +13,7 @@ interface ProjectCardProps {
   title: string;
   desc: string;
   github: string;
-  demo?: string;
+  Sujet?: string;
   tech: string[];
 }
 
@@ -22,7 +22,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   title,
   desc,
   github,
-  demo,
+  Sujet,
   tech,
 }) => {
   const ref = useRef(null);
@@ -52,7 +52,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         scale: 1.02,
         transition: {
           duration: 0.3,
-          type: "spring" as const,
+          type: "spring",
           stiffness: 400,
           damping: 25,
         },
@@ -87,7 +87,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         />
 
         <div className="relative z-10 p-4 flex flex-col flex-grow">
-          {/* Card Header Accent */}
+          {/* Title */}
           <motion.h3
             className="text-xl font-bold mb-3 mt-2 font-nasalization"
             style={{ color: "hsl(var(--primary))" }}
@@ -98,6 +98,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
             {title}
           </motion.h3>
 
+          {/* Description */}
           <motion.p
             className="text-sm mb-6 flex-grow font-inter leading-relaxed"
             style={{ color: "hsl(var(--foreground) / 0.8)" }}
@@ -108,7 +109,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
             {desc}
           </motion.p>
 
-          {/* Tech Stack */}
+          {/* Tech stack */}
           <motion.div
             className="flex flex-wrap gap-2 mb-6"
             initial={{ opacity: 0, y: 10 }}
@@ -127,14 +128,13 @@ export const ProjectCard: FC<ProjectCardProps> = ({
                 transition={{
                   duration: 0.3,
                   delay: index * 0.1 + 0.5 + techIndex * 0.05,
-                  type: "spring" as const,
+                  type: "spring",
                   stiffness: 300,
                 }}
                 whileHover={{ scale: 1.05 }}
               >
                 <Badge
-                  variant="outline"
-                  className="text-xs transition-all duration-300 hover:shadow-md font-mono px-3 py-1"
+                  className="text-xs font-mono px-3 py-1 border transition-all duration-300 hover:shadow-md"
                   style={{
                     borderColor: "hsl(var(--primary) / 0.3)",
                     color: "hsl(var(--foreground) / 0.9)",
@@ -148,22 +148,17 @@ export const ProjectCard: FC<ProjectCardProps> = ({
             ))}
           </motion.div>
 
-          {/* Action Buttons */}
+          {/* Buttons */}
           <motion.div
             className="flex space-x-3 mt-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: index * 0.1 + 0.6 }}
           >
-            <motion.div
-              className="flex-1"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
+            {/* Code */}
+            <motion.div className="flex-1" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Button
-                variant="outline"
-                size="sm"
-                className="w-full transition-all duration-300 hover:shadow-lg font-mono text-xs"
+                className="w-full font-mono text-xs border transition-all duration-300 hover:shadow-lg"
                 style={{
                   backgroundColor: "hsl(var(--glass-bg-light))",
                   borderColor: "hsl(var(--glass-border))",
@@ -178,20 +173,17 @@ export const ProjectCard: FC<ProjectCardProps> = ({
                 </a>
               </Button>
             </motion.div>
-            {demo && (
-              <motion.div
-                className="flex-1"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
+
+            {/* Sujet */}
+            {Sujet && (
+              <motion.div className="flex-1" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
-                  size="sm"
                   className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 hover:shadow-lg font-mono text-xs"
                   asChild
                 >
-                  <Link href={demo} target="_blank" rel="noopener noreferrer">
+                  <Link href={Sujet} target="_blank" rel="noopener noreferrer">
                     <FiExternalLink className="w-4 h-4 mr-2" />
-                    Demo
+                    Sujet
                   </Link>
                 </Button>
               </motion.div>

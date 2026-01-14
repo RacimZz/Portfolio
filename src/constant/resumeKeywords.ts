@@ -1,8 +1,8 @@
 export const resumeKeywords = [
 
-  "Aarab Nishchal",
-  "Aarab Nishchal resume",
-  "Aarab Nishchal CV",
+  "Racim Zenati",
+  "Racim Zenati resume",
+  "Racim Zenati CV",
   "Software Developer",
   "Full Stack Developer",
   "Frontend Developer",

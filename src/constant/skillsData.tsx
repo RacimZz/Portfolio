@@ -8,11 +8,16 @@ import {
   FaRobot,
   FaBookOpen,
   FaCodeBranch,
+  FaGolang,
+  FaHtml5,
+  FaCss3,
+  FaLinux,
+  FaUnity,
 } from "react-icons/fa6";
 
-import { TbBrandCpp } from "react-icons/tb";
+import { TbAssembly, TbBrandCpp, TbBrandCSharp, TbHomeStats, TbSql } from "react-icons/tb";
 import { GiBrain } from "react-icons/gi";
-import { MdApi } from "react-icons/md";
+import { MdApi, MdJavascript } from "react-icons/md";
 
 interface LogoProps {
   title: string;
@@ -25,21 +30,23 @@ interface SkillsDataProps {
   data: LogoProps[];
 }
 
-/**
- * Skills (version initiale)
- * Déduites à partir de tes projets (VR/3D, ML, systèmes, analyse de données).
- * On pourra enrichir ensuite (niveau, outils, etc.).
- */
+
 export const skillsData: SkillsDataProps[] = [
   {
     title: "Langages",
     data: [
       { title: "Python", logoComponent: FaPython, color: "#3776AB" },
       { title: "C / C++", logoComponent: TbBrandCpp, color: "#00599C" },
-      { title: "C#", logoComponent: FaLaptopCode, color: "#7C3AED" },
-      { title: "R", logoComponent: FaBookOpen, color: "#198CE7" },
+      { title: "C#", logoComponent: TbBrandCSharp, color: "#7C3AED" },
+      { title: "R", logoComponent: TbHomeStats, color: "#198CE7" },
       { title: "OCaml", logoComponent: FaCodeBranch, color: "#F97316" },
-      { title: "ARM (Assembly)", logoComponent: FaCodeBranch, color: "#d4d4d8" },
+      { title: "Go", logoComponent: FaGolang, color: "#70574a" },
+      { title: "HTML", logoComponent: FaHtml5, color: "#178f1f" },
+      { title: "CSS", logoComponent: FaCss3, color: "#264de4" },
+      { title: "JavaScript", logoComponent: MdJavascript, color: "#f0db4f" },
+      { title: "Bash", logoComponent: FaLinux, color: "#4EAA25" },
+      { title: "SQL", logoComponent: TbSql, color: "#F97316" },
+      { title: "Assembly", logoComponent: TbAssembly, color: "#d4d4d8" },
     ],
   },
   {
@@ -48,6 +55,7 @@ export const skillsData: SkillsDataProps[] = [
       { title: "Git", logoComponent: FaGitAlt, color: "#F05032" },
       { title: "GitHub", logoComponent: FaGithub, color: "#d4d4d8" },
       { title: "Cluster / HPC", logoComponent: FaRobot, color: "#9C27B0" },
+      { title: "Unity", logoComponent: FaUnity, color: "#F97316" },
       { title: "LaTeX", logoComponent: FaBookOpen, color: "#0A66C2" },
     ],
   },

@@ -3,7 +3,7 @@
 export const Background = () => {
   return (
     <div className="top-0 fixed -z-10 h-full w-full overflow-hidden">
-      {/* Image de fond (sobriété sombre comme ton portfolio) */}
+      {/* Image de fond */}
       <div
         className="absolute inset-0"
         style={{

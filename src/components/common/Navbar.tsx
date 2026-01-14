@@ -91,9 +91,8 @@ export const Navbar = () => {
 
           <div className="hidden sm:block">
             <Button
-              variant="outline"
               asChild
-              className="border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-200"
+              className="border border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-200"
             >
               {isCVPage ? (
                 <a href="/docs/Racim_Zenati_CV.pdf" download="Racim_Zenati_CV.pdf">
@@ -135,9 +134,8 @@ export const Navbar = () => {
           <div className="pt-4 pb-2 border-t border-border/50 mt-4">
             <div className="space-y-3">
               <Button
-                variant="outline"
                 asChild
-                className="w-full border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-200"
+                className="w-full border border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-200"
               >
                 {isCVPage ? (
                   <a

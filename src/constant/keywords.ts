@@ -1,9 +1,9 @@
 const names = [
-  "Aarab Nishchal",
-  "Aarab Nishchal Portfolio",
+  "Racim Zenati",
+  "Racim Zenati Portfolio",
   "Aarabii",
-  "Aarab Nishchal KIIT",
-  "Aarab Nishchal Bhubaneswar",
+  "Racim Zenati KIIT",
+  "Racim Zenati Bhubaneswar",
 ];
 
 const roles = [
