@@ -4,6 +4,8 @@ import { ProjectCard } from "./ProjectCard";
 import { ContactFormCard } from "./ContactFormCard";
 import { ContactSocials } from "./ContactSocials";
 
+export { ExperienceCard as ParcoursCard };
+
 export {
   ExperienceCard,
   SkillCard,

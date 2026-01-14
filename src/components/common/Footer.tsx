@@ -1,14 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { TbHeart, TbHeartFilled } from "react-icons/tb";
-import { LuGithub, LuLinkedin, LuTwitter, LuMail } from "react-icons/lu";
+import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
 
 import { quentine } from "@/app/fonts";
-import { selfData } from "@/constant/";
 import spaceImg from "@/assets/images/space.png";
 
 const floatingParticles = [
@@ -19,26 +16,22 @@ const floatingParticles = [
 ];
 
 export const Footer = () => {
-  const [isHeartFilled, setIsHeartFilled] = useState(false);
-  const toggleHeart = () => setIsHeartFilled(!isHeartFilled);
-
   const socialLinks = [
     {
       icon: LuGithub,
-      href: `https://github.com/${selfData.socials_username.github}`,
+      href: "https://github.com/RacimZz",
       label: "GitHub",
     },
     {
       icon: LuLinkedin,
-      href: `https://linkedin.com/in/${selfData.socials_username.linkedin}`,
+      href: "https://www.linkedin.com/in/racim-zenati/",
       label: "LinkedIn",
     },
     {
-      icon: LuTwitter,
-      href: `https://twitter.com/${selfData.socials_username.twitter}`,
-      label: "Twitter",
+      icon: LuMail,
+      href: "mailto:racimzenati.pro@gmail.com",
+      label: "Email",
     },
-    { icon: LuMail, href: `mailto:${selfData.email}`, label: "Email" },
   ];
 
   return (
@@ -95,7 +88,7 @@ export const Footer = () => {
             <h3
               className={`${quentine.className} text-2xl font-semibold text-primary`}
             >
-              Aarab Nishchal
+              Racim Zenati
             </h3>
           </div>
 
@@ -104,6 +97,8 @@ export const Footer = () => {
               <a
                 key={link.label}
                 href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={link.label}
                 className="w-8 h-8 flex items-center justify-center rounded-lg border border-primary/30 bg-card/50 hover:bg-primary/10 hover:text-primary text-muted-foreground transition"
               >
@@ -115,21 +110,13 @@ export const Footer = () => {
 
         <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent my-4" />
 
-        <div className="text-xs text-center text-muted-foreground space-y-2">
-          <p className="flex items-center justify-center gap-2">
-            Made with
-            <button onClick={toggleHeart} className="text-primary" aria-label="Toggle heart">
-              {isHeartFilled ? <TbHeartFilled /> : <TbHeart />}
-            </button>
-            by
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-primary/80 hover:text-primary"
-            >
-              Aarab Nishchal
-            </button>
+        <div className="text-xs text-center text-muted-foreground space-y-1">
+          <p>
+            © {new Date().getFullYear()} Racim Zenati — ENSIMAG
           </p>
-          <span>Licensed under MIT</span>
+          <p className="text-muted-foreground/80">
+            Grenoble / Saint-Martin-d’Hères, France
+          </p>
         </div>
       </div>
 
