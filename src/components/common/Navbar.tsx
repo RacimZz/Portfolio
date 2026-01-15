@@ -49,18 +49,10 @@ export const Navbar = () => {
 
   const navLinks = [
     { label: "À propos", href: "#about" },
-    { label: "Parcours", href: "#experience" }, // adapte si besoin
+    { label: "Parcours", href: "#experience" }, 
     { label: "Projets", href: "#projects" },
     { label: "Contact", href: "#contact" },
   ];
-
-  const desktopLinkClass =
-    "px-4 py-2 rounded-xl border border-secondary/30 bg-card/20 text-foreground/90 " +
-    "hover:bg-secondary/15 hover:border-secondary/60 hover:text-secondary " +
-    "transition-all duration-200 backdrop-blur-md shadow-sm";
-
-  const desktopLinkActiveGlow =
-    "hover:shadow-[0_0_18px_hsl(var(--secondary)/0.25)]";
 
   return (
     <nav
@@ -74,9 +66,10 @@ export const Navbar = () => {
         }`}
       >
         <div className="flex items-center justify-between gap-4">
+          {/* Logo + Name */}
           <Link
             href="/"
-            className="flex items-center space-x-2 sm:space-x-3 group"
+            className="flex items-center space-x-2 sm:space-x-3 group shrink-0"
           >
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-glass-bg flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
               <Image
@@ -91,60 +84,143 @@ export const Navbar = () => {
                   width: 40,
                   height: 40,
                 })}`}
-                style={{ objectFit: "cover" }}
+                style={{ 
+                  objectFit: "cover",
+                  filter: "brightness(0) saturate(100%) invert(1)"
+                }}
               />
             </div>
             <span
-              className={`${quentine.className} text-primary-foreground text-xl sm:text-base`}
+              className={`${quentine.className} text-white/90 text-xl sm:text-base group-hover:text-white transition-colors`}
             >
               {selfData.name}
             </span>
+
           </Link>
 
-          {/* Desktop shortcuts */}
+          {/* Desktop shortcuts (spread across navbar width) */}
           {!isCVPage && (
-            <div className="hidden md:flex items-center justify-center flex-1">
-              <nav className="flex items-center gap-4">
+            <div className="hidden md:flex flex-1">
+              <nav className="flex gap-1 w-full justify-between mx-auto max-w-lg">
                 {navLinks.map((l) => (
                   <a
                     key={l.href}
                     href={l.href}
-                    className={`${desktopLinkClass} ${desktopLinkActiveGlow}`}
+                    className="
+                      relative
+                      group
+                      text-center
+                      px-6 py-3
+                      rounded-full
+                      bg-gradient-to-br from-card/40 to-card/20
+                      text-foreground/80
+                      backdrop-blur-md
+                      overflow-hidden
+                      transition-all duration-300
+                      hover:text-secondary
+                      hover:scale-105
+                      hover:shadow-[0_0_20px_rgba(var(--secondary-rgb)/0.4)]
+                      before:absolute
+                      before:inset-0
+                      before:rounded-full
+                      before:bg-gradient-to-br
+                      before:from-secondary/20
+                      before:to-secondary/5
+                      before:opacity-0
+                      before:transition-opacity
+                      before:duration-300
+                      hover:before:opacity-100
+                      after:absolute
+                      after:inset-0
+                      after:rounded-full
+                      after:border
+                      after:border-secondary/0
+                      after:transition-all
+                      after:duration-300
+                      hover:after:border-secondary/50
+                    "
                   >
-                    {l.label}
+                    <span className="relative z-10 font-medium">
+                      {l.label}
+                    </span>
                   </a>
                 ))}
               </nav>
             </div>
           )}
 
-          <div className="hidden sm:block">
+          {/* CV Button - Desktop */}
+          <div className="hidden sm:block shrink-0">
             <Button
               asChild
-              className="border border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-200"
+              className="
+                relative
+                group
+                overflow-hidden
+                rounded-full
+                px-6 py-2.5
+                bg-gradient-to-r from-primary/90 to-primary
+                border-0
+                text-primary-foreground
+                font-medium
+                transition-all duration-300
+                hover:scale-105
+                hover:shadow-[0_0_25px_rgba(var(--primary-rgb)/0.5)]
+                before:absolute
+                before:inset-0
+                before:bg-gradient-to-r
+                before:from-primary
+                before:to-primary/80
+                before:opacity-0
+                before:transition-opacity
+                before:duration-300
+                hover:before:opacity-100
+              "
             >
               {isCVPage ? (
                 <a
                   href="/docs/Racim_Zenati_CV.pdf"
                   download="Racim_Zenati_CV.pdf"
+                  className="relative z-10"
                 >
                   Télécharger CV
                 </a>
               ) : (
-                <Link href="/resume">CV</Link>
+                <Link href="/resume" className="relative z-10">
+                  CV
+                </Link>
               )}
             </Button>
           </div>
 
+          {/* Mobile menu toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-muted/50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+            className="
+              md:hidden 
+              p-2 
+              rounded-full
+              bg-card/30
+              backdrop-blur-md
+              hover:bg-card/50
+              transition-all duration-200 
+              hover:scale-110
+              focus:outline-none 
+              focus:ring-2 
+              focus:ring-primary/50
+            "
             aria-label="Toggle mobile menu"
           >
             {isMenuOpen ? (
-              <RiCloseLargeFill size={20} className="transition-transform duration-200" />
+              <RiCloseLargeFill
+                size={20}
+                className="transition-transform duration-200"
+              />
             ) : (
-              <RiMenu4Fill size={20} className="transition-transform duration-200" />
+              <RiMenu4Fill
+                size={20}
+                className="transition-transform duration-200"
+              />
             )}
           </button>
         </div>
@@ -158,15 +234,49 @@ export const Navbar = () => {
           <div className="pt-4 pb-2 border-t border-border/50 mt-4">
             <div className="space-y-3">
               {!isCVPage && (
-                <div className="grid grid-cols-1 gap-2">
+                <div className="grid grid-cols-1 gap-2.5">
                   {navLinks.map((l) => (
                     <a
                       key={l.href}
                       href={l.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="px-4 py-3 rounded-xl border border-secondary/30 bg-card/20 text-center text-foreground/90 hover:bg-secondary/15 hover:border-secondary/60 hover:text-secondary transition-all duration-200 backdrop-blur-md"
+                      className="
+                        relative
+                        group
+                        px-5 py-3.5
+                        rounded-full
+                        bg-gradient-to-br from-card/40 to-card/20
+                        text-center
+                        text-foreground/80
+                        backdrop-blur-md
+                        overflow-hidden
+                        transition-all duration-300
+                        hover:text-secondary
+                        hover:scale-[1.02]
+                        active:scale-95
+                        before:absolute
+                        before:inset-0
+                        before:rounded-full
+                        before:bg-gradient-to-br
+                        before:from-secondary/20
+                        before:to-secondary/5
+                        before:opacity-0
+                        before:transition-opacity
+                        before:duration-300
+                        hover:before:opacity-100
+                        after:absolute
+                        after:inset-0
+                        after:rounded-full
+                        after:border
+                        after:border-secondary/0
+                        after:transition-all
+                        after:duration-300
+                        hover:after:border-secondary/40
+                      "
                     >
-                      {l.label}
+                      <span className="relative z-10 font-medium">
+                        {l.label}
+                      </span>
                     </a>
                   ))}
                 </div>
@@ -174,14 +284,37 @@ export const Navbar = () => {
 
               <Button
                 asChild
-                className="w-full border border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-200"
+                className="
+                  w-full
+                  relative
+                  group
+                  overflow-hidden
+                  rounded-full
+                  px-5 py-3
+                  bg-gradient-to-r from-primary/90 to-primary
+                  border-0
+                  text-primary-foreground
+                  font-medium
+                  transition-all duration-300
+                  hover:scale-[1.02]
+                  active:scale-95
+                  before:absolute
+                  before:inset-0
+                  before:bg-gradient-to-r
+                  before:from-primary
+                  before:to-primary/80
+                  before:opacity-0
+                  before:transition-opacity
+                  before:duration-300
+                  hover:before:opacity-100
+                "
               >
                 {isCVPage ? (
                   <a
                     href="/docs/Racim_Zenati_CV.pdf"
                     download="Racim_Zenati_CV.pdf"
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center justify-center"
+                    className="relative z-10 flex items-center justify-center"
                   >
                     Télécharger CV
                   </a>
@@ -189,7 +322,7 @@ export const Navbar = () => {
                   <Link
                     href="/resume"
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center justify-center"
+                    className="relative z-10 flex items-center justify-center"
                   >
                     CV
                   </Link>
