@@ -15,13 +15,13 @@ export const Hero = () => {
   return (
     <section
       ref={ref}
-      className="min-h-screen flex items-center justify-start px-6 relative"
+      className="min-h-screen flex items-center justify-center px-6 relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
 
       <div className="max-w-full sm:max-w-7xl mx-auto w-full relative z-10">
         <motion.div
-          className="max-w-4xl space-y-8"
+          className="max-w-4xl space-y-8 mx-auto text-center items-center flex flex-col"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -56,7 +56,7 @@ export const Hero = () => {
             </motion.p>
 
             <motion.p
-              className="text-base md:text-lg max-w-2xl leading-relaxed"
+              className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
               style={{ color: "hsl(var(--foreground) / 0.8)" }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export const Hero = () => {
           </div>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 items-start"
+            className="flex flex-col sm:flex-row gap-4 items-center justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
@@ -96,7 +96,7 @@ export const Hero = () => {
 
             {/* Raccourcis */}
             <motion.div
-              className="flex flex-wrap gap-3"
+              className="flex flex-wrap gap-3 justify-center"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.95 }}
@@ -106,7 +106,6 @@ export const Hero = () => {
                   asChild
                   className="h-12 px-6 text-sm bg-card/30 border border-white/15 text-foreground/90 hover:bg-white/10 hover:border-white/25 transition-all duration-300 backdrop-blur-md"
                 >
-                  {/* ⚠️ Parcours = section Experience dans ce template */}
                   <a href="#experience" className="font-medium">
                     Parcours
                   </a>
