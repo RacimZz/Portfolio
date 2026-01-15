@@ -14,11 +14,11 @@ export const selfData = {
   // La première entrée est affichée dans le Hero
   roles: [
     "Étudiant ingénieur (ENSIMAG)",
-    "Recherche & data",
+    "Recherche & IA",
     "Développement logiciel",
   ],
 
-  desc: "Je conçois et développe des projets allant du logiciel à la data science.",
+  desc: "Je conçois et développe des projets allant du logiciel à l'IA.",
   bio: "Salut ! Je suis Racim, étudiant en 1ère année du cycle ingénieur à l’ENSIMAG, Je suis actuellement à la recherche d'un stage de 3 mois et/ou d’une alternance de 2 ans en IA et prêt à m’investir pleinement dans de nouveaux projets !",
   about: [
   "Je suis étudiant ingénieur à l’ENSIMAG, passionné par l’intelligence artificielle, la data science et les systèmes informatiques.",
