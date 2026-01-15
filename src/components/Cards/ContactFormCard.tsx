@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 import { toast } from "sonner";
 import { useState, useEffect } from "react";
@@ -8,58 +10,14 @@ import { Card } from "../ui/card";
 export const ContactFormCard = () => {
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
+
   const [formValues, setFormValues] = useState({
     senderName: "",
     senderEmail: "",
-    reasonToContact: "General inquries",
+    reasonToContact: "General inquiries",
     senderMsg: "",
+    botField: "", // honeypot anti-spam
   });
-
-  const sendEmail = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSending(true);
-
-    const sendEmailPromise = new Promise((resolve) => {
-      // Pas d’envoi d’email automatique (pas de backend).
-      // On garde l’UX (toast + reset) pour une expérience fluide.
-      setTimeout(() => {
-        setIsSent(true);
-        setFormValues({
-          senderName: "",
-          senderEmail: "",
-          reasonToContact: "General inquries",
-          senderMsg: "",
-        });
-        setIsSending(false);
-        resolve("Message enregistré. Contacte-moi via LinkedIn ou copie l’email.");
-      }, 800);
-    });
-
-    toast.promise(sendEmailPromise, {
-      loading: "Envoi...",
-      success: "Message prêt ! Contacte-moi via LinkedIn ou par email.",
-      error: (error) => {
-        if (error.message.includes("not valid")) {
-          return "❌ The email address you entered is not valid (".concat(
-            formValues.senderEmail,
-            "). Please use a real email."
-          );
-        }
-        return (
-          error.message ||
-          "Impossible d'envoyer automatiquement. Utilise LinkedIn ou copie l'email."
-        );
-      },
-    });
-  };
-
-  useEffect(() => {
-    if (isSent) {
-      setTimeout(() => {
-        setIsSent(false);
-      }, 3000);
-    }
-  }, [isSent]);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -71,6 +29,75 @@ export const ContactFormCard = () => {
       [e.target.name]: e.target.value,
     });
   };
+
+  const sendEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Honeypot: si rempli -> bot
+    if (formValues.botField) return;
+
+    const key = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+    if (!key) {
+      toast.error(
+        "Clé Web3Forms manquante. Ajoute NEXT_PUBLIC_WEB3FORMS_KEY dans .env.local puis relance npm run dev."
+      );
+      return;
+    }
+
+    setIsSending(true);
+
+    const payload = {
+      access_key: key,
+      subject: `Portfolio — ${formValues.reasonToContact} — ${formValues.senderName}`,
+      from_name: formValues.senderName,
+      name: formValues.senderName,
+      email: formValues.senderEmail,
+      message: formValues.senderMsg,
+      reason: formValues.reasonToContact,
+    };
+
+    const sendEmailPromise = fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    }).then(async (res) => {
+      const data = await res.json();
+      if (!res.ok || !data?.success) {
+        throw new Error(data?.message || "Erreur lors de l'envoi du message.");
+      }
+      return data;
+    });
+
+    toast.promise(sendEmailPromise, {
+      loading: "Envoi...",
+      success: "✅ Message envoyé ! Je te réponds rapidement.",
+      error: (err) =>
+        err?.message ||
+        "❌ Impossible d'envoyer. Réessaie ou contacte-moi via LinkedIn.",
+    });
+
+    try {
+      await sendEmailPromise;
+
+      setIsSent(true);
+      setFormValues({
+        senderName: "",
+        senderEmail: "",
+        reasonToContact: "General inquiries",
+        senderMsg: "",
+        botField: "",
+      });
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isSent) {
+      const t = setTimeout(() => setIsSent(false), 3000);
+      return () => clearTimeout(t);
+    }
+  }, [isSent]);
 
   return (
     <motion.div
@@ -175,6 +202,17 @@ export const ContactFormCard = () => {
 
         <div className="relative z-10 p-4 md:p-6 flex flex-col flex-grow">
           <form onSubmit={sendEmail} className="space-y-3">
+            {/* Honeypot invisible */}
+            <input
+              type="text"
+              name="botField"
+              value={formValues.botField}
+              onChange={handleChange}
+              className="hidden"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <motion.div
                 initial={{ opacity: 0, x: -40, rotateY: -15 }}
@@ -187,7 +225,6 @@ export const ContactFormCard = () => {
                   damping: 15,
                 }}
                 whileHover={{ scale: 1.02, rotateY: 2 }}
-                whileFocus={{ scale: 1.02, rotateY: 2 }}
               >
                 <input
                   required
@@ -216,7 +253,6 @@ export const ContactFormCard = () => {
                   damping: 15,
                 }}
                 whileHover={{ scale: 1.02, rotateY: -2 }}
-                whileFocus={{ scale: 1.02, rotateY: -2 }}
               >
                 <input
                   required
@@ -259,23 +295,20 @@ export const ContactFormCard = () => {
                   borderColor: "hsl(var(--glass-border))",
                 }}
               >
-                <option className="text-black" value="General inquries">
+                <option className="text-black" value="General inquiries">
                   General Inquiries
                 </option>
                 <option className="text-black" value="Project inquiries">
                   Project Inquiries
+                </option>
+                <option className="text-black" value="Internship / Alternance">
+                  Internship / Alternance
                 </option>
                 <option className="text-black" value="Collaboration request">
                   Collaboration Request
                 </option>
                 <option className="text-black" value="Feedback/Question">
                   Feedback/Question
-                </option>
-                <option className="text-black" value="Bug report">
-                  Bug Report
-                </option>
-                <option className="text-black" value="Feature request">
-                  Feature Request
                 </option>
               </select>
             </motion.div>
