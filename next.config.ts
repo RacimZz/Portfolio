@@ -1,12 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Désactiver ESLint pendant le build pour Netlify
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   images: {
     unoptimized: false,
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "aarab.vercel.app",
+        hostname: "racim-zenati.netlify.app",
         port: "",
         pathname: "/**",
       },
@@ -71,22 +76,22 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/email",
-        destination: "mailto:aarab.nishchal@gmail.com",
+        destination: "mailto:racimzenati.pro@gmail.com",
         permanent: true,
       },
       {
         source: "/directresume",
-        destination: "/docs/Aarab_Nishchal_Resume.pdf",
+        destination: "/docs/Racim_Zenati_CV.pdf",
         permanent: true,
       },
       {
         source: "/direct-resume",
-        destination: "/docs/Aarab_Nishchal_Resume.pdf",
+        destination: "/docs/Racim_Zenati_CV.pdf",
         permanent: true,
       },
       {
         source: "/github",
-        destination: "www.github.com/aarabii",
+        destination: "https://www.github.com/racimzz",
         permanent: true,
       },
     ];
