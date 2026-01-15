@@ -15,20 +15,20 @@ import {
 } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  applicationName: "Aarab Nishchal",
-  title: "Aarab Nishchal | Full Stack Developer & AI Engineer",
+  applicationName: "Racim ZENATI",
+  title: "Racim's Portfolio",
   description:
-    "Aarab Nishchal is a student developer passionate about building modern web apps with Next.js, React, and open-source tools. Explore his projects, experiments, and developer portfolio.",
+    "Racim ZENATI - Student at Ensimag, passionate about software development and AI. Explore my projects in Python, C, and more.",
   authors: [
     {
-      name: "Aarab Nishchal",
+      name: "Racim ZENATI",
       url: "https://aarab.vercel.app",
     },
   ],
-  creator: "Aarab Nishchal",
+  creator: "Racim ZENATI",
   referrer: "origin-when-cross-origin",
   category: "Portfolio",
-  classification: "Software Development",
+  classification: "Etudiant à l'Ensimag",
   keywords: Keywords,
   metadataBase: new URL("https://aarab.vercel.app"),
 
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     capable: true,
-    title: "Aarab Nishchal",
+    title: "Racim ZENATI",
     statusBarStyle: "black-translucent",
   },
   formatDetection: {
@@ -92,17 +92,17 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 
   openGraph: {
-    title: "Aarab Nishchal",
+    title: "Racim ZENATI",
     description:
-      "Explore Aarab Nishchal’s portfolio featuring projects in React, Next.js, AI, and developer tools. Discover a world of creative web applications and open-source experiments.",
+      "Explore Racim ZENATI’s portfolio featuring projects in Python, R, AI, and developer tools.",
     url: "https://aarab.vercel.app",
-    siteName: "Aarab Nishchal",
+    siteName: "Racim ZENATI",
     images: [
       {
         url: "/images/thumbnail.png",
         width: 1200,
         height: 630,
-        alt: "Aarab Nishchal Portfolio Thumbnail",
+        alt: "Racim ZENATI Portfolio Thumbnail",
       },
     ],
     locale: "en_US",
@@ -112,9 +112,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Aarab Nishchal",
+    title: "Racim ZENATI",
     description:
-      "Check out Aarab Nishchal’s personal portfolio and dev projects using Next.js, React, Tailwind, and modern web tech.",
+      "Check out Racim ZENATI’s personal portfolio and dev projects using Next.js, React, Tailwind, and modern web tech.",
     images: ["/images/thumbnail.png"],
     creator: "@aarab_ii",
     site: "@aarab_ii",

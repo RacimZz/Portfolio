@@ -12,7 +12,6 @@ import { quentine, mono } from "@/app/fonts";
 export const Hero = () => {
   const ref = useRef(null);
 
-
   return (
     <section
       ref={ref}
@@ -68,22 +67,19 @@ export const Hero = () => {
           </div>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-4 items-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
           >
+            {/* Voir CV */}
             <motion.div
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.2 },
-              }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
               whileTap={{ scale: 0.95 }}
             >
               <Button
                 asChild
-                size="lg"
-                className="relative group overflow-hidden btn-primary shadow-lg hover:shadow-xl transition-all duration-300"
+                className="relative group overflow-hidden btn-primary shadow-lg hover:shadow-xl transition-all duration-300 h-12 px-6 text-sm"
               >
                 <Link href="/resume">
                   <motion.div
@@ -96,6 +92,48 @@ export const Hero = () => {
                   <span className="relative z-10 font-medium">Voir CV</span>
                 </Link>
               </Button>
+            </motion.div>
+
+            {/* Raccourcis */}
+            <motion.div
+              className="flex flex-wrap gap-3"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.95 }}
+            >
+              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+                <Button
+                  asChild
+                  className="h-12 px-6 text-sm bg-card/30 border border-white/15 text-foreground/90 hover:bg-white/10 hover:border-white/25 transition-all duration-300 backdrop-blur-md"
+                >
+                  {/* ⚠️ Parcours = section Experience dans ce template */}
+                  <a href="#experience" className="font-medium">
+                    Parcours
+                  </a>
+                </Button>
+              </motion.div>
+
+              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+                <Button
+                  asChild
+                  className="h-12 px-6 text-sm bg-card/30 border border-white/15 text-foreground/90 hover:bg-white/10 hover:border-white/25 transition-all duration-300 backdrop-blur-md"
+                >
+                  <a href="#projects" className="font-medium">
+                    Projets
+                  </a>
+                </Button>
+              </motion.div>
+
+              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+                <Button
+                  asChild
+                  className="h-12 px-6 text-sm bg-card/30 border border-white/15 text-foreground/90 hover:bg-white/10 hover:border-white/25 transition-all duration-300 backdrop-blur-md"
+                >
+                  <a href="#contact" className="font-medium">
+                    Contact
+                  </a>
+                </Button>
+              </motion.div>
             </motion.div>
           </motion.div>
         </motion.div>

@@ -39,14 +39,6 @@ export function Experience() {
           >
             Parcours
           </motion.h2>
-          <motion.p
-            className="text-xs text-muted-foreground max-w-2xl mx-auto mt-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            Parcours académique & stages
-          </motion.p>
         </motion.div>
 
         <div className="relative">

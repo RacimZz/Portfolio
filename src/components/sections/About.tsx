@@ -46,10 +46,10 @@ export const About = () => {
                 },
               }}
             >
-              <div
-                className="w-full max-w-md h-80 rounded-2xl overflow-hidden relative  border-2 group/image"
-                style={{ borderColor: "hsl(var(--glass-border))" }}
-              >
+                <div
+                  className="w-full max-w-lg h-96 md:h-[420px] lg:h-[460px] rounded-3xl overflow-hidden relative border-2 group/image"
+                  style={{ borderColor: "hsl(var(--glass-border))" }}
+                >
                 <motion.div
                   initial={{ scale: 1.1, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
