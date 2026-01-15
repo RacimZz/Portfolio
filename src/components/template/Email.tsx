@@ -36,21 +36,6 @@ export function EmailTemplate({
       url: `https://linkedin.com/in/${selfData.socials_username.linkedin}`,
       icon: "https://cdn-icons-png.flaticon.com/512/145/145807.png",
     },
-    {
-      name: "LeetCode",
-      url: `https://leetcode.com/${selfData.socials_username.leetcode}`,
-      icon: "https://cdn.iconscout.com/icon/free/png-256/leetcode-3521542-2944960.png",
-    },
-    {
-      name: "Instagram",
-      url: `https://instagram.com/${selfData.socials_username.instagram}`,
-      icon: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
-    },
-    {
-      name: "X",
-      url: `https://x.com/${selfData.socials_username.twitter}`,
-      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968830.png",
-    },
   ];
 
   return (
@@ -69,7 +54,7 @@ export function EmailTemplate({
                 />
               </Column>
               <Column>
-                <Text style={brandText}>Aarab Nishchal</Text>
+                <Text style={brandText}>Racim Zenati</Text>
               </Column>
             </Row>
           </Section>
