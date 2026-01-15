@@ -20,7 +20,7 @@ export const Projects = () => {
     <section
       ref={ref}
       id="projects"
-      className="py-24 max-w-6xl mx-auto relative overflow-hidden"
+      className="py-24 max-w-6xl mx-auto relative overflow-visible"
     >
 
 
