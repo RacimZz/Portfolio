@@ -73,7 +73,7 @@ export const experienceData = [
     year: "Sep 2021 — Juin 2022",
     description: [
       "Lycée Khatri Omar El Kseur — Béjaïa, Algérie.",
-      "Moyenne générale : 17,41",
+      "Moyenne générale : 17,41 — Major de promotion",
     ],
     company: "Baccalauréat",
     technologies: ["Mathématiques"],
