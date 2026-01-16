@@ -8,6 +8,10 @@ import { BsSend, BsSendCheck } from "react-icons/bs";
 import { Card } from "../ui/card";
 
 export const ContactFormCard = () => {
+  console.log(
+    "WEB3FORMS KEY =",
+    process.env.NEXT_PUBLIC_WEB3FORMS_KEY
+  );
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
