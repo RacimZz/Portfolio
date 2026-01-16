@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Racim ZENATI",
-      url: "https://aarab.vercel.app",
+      url: "https://racim-zenati.netlify.app",
     },
   ],
   creator: "Racim ZENATI",
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
   category: "Portfolio",
   classification: "Etudiant à l'Ensimag",
   keywords: Keywords,
-  metadataBase: new URL("https://aarab.vercel.app"),
+  metadataBase: new URL("https://racim-zenati.netlify.app"),
 
 
   alternates: {
-    canonical: "https://aarab.vercel.app",
+    canonical: "https://racim-zenati.netlify.app",
     languages: {
-      "en-US": "https://aarab.vercel.app",
+      "en-US": "https://racim-zenati.netlify.app",
     },
   },
   robots: {
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     title: "Racim ZENATI",
     description:
       "Explore Racim ZENATI’s portfolio featuring projects in Python, R, AI, and developer tools.",
-    url: "https://aarab.vercel.app",
+    url: "https://racim-zenati.netlify.app",
     siteName: "Racim ZENATI",
     images: [
       {
@@ -116,8 +116,8 @@ export const metadata: Metadata = {
     description:
       "Check out Racim ZENATI’s personal portfolio and dev projects using Next.js, React, Tailwind, and modern web tech.",
     images: ["/images/thumbnail.png"],
-    creator: "@aarab_ii",
-    site: "@aarab_ii",
+    creator: "@racimzz",
+    site: "@racimzz",
   },
 };
 

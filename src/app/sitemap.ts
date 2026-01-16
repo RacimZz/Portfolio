@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://aarab.vercel.app";
+  const baseUrl = "https://racim-zenati.netlify.app";
   const lastModified = new Date();
 
   const sections = [
@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/Aarab_Nishchal_Resume.pdf`,
+      url: `${baseUrl}/docs/Racim_ZENATI_CV.pdf`,
       lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.6,
