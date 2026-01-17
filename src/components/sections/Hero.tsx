@@ -4,10 +4,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
-import { Button } from "@/components/ui/button";
 import { selfData } from "@/constant";
-
 import { quentine, mono } from "@/app/fonts";
+
+import { LuGithub, LuLinkedin } from "react-icons/lu";
 
 export const Hero = () => {
   const ref = useRef(null);
@@ -17,30 +17,24 @@ export const Hero = () => {
       ref={ref}
       className="min-h-screen flex items-center justify-center px-6 relative"
     >
+      {/* léger voile */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
 
-      <div className="max-w-full sm:max-w-7xl mx-auto w-full relative z-10">
+      <div className="max-w-7xl mx-auto w-full relative z-10">
         <motion.div
-          className="max-w-4xl space-y-8 mx-auto text-center items-center flex flex-col"
+          className="max-w-4xl mx-auto text-center flex flex-col items-center space-y-10"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
+          {/* Texte */}
           <div className="space-y-6">
             <motion.h1
               className={`${quentine.className} text-5xl md:text-7xl lg:text-8xl font-bold`}
               style={{ color: "hsl(var(--primary))" }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.2,
-                ease: [0.25, 0.46, 0.45, 0.94],
-              }}
-              whileHover={{
-                scale: 1.02,
-                transition: { duration: 0.3 },
-              }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
               {selfData.name}
             </motion.h1>
@@ -66,74 +60,62 @@ export const Hero = () => {
             </motion.p>
           </div>
 
+          {/* Boutons sociaux (style contact) */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 items-center justify-center"
+            className="flex gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
           >
-            {/* Voir CV */}
-            <motion.div
-              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            {/* GitHub */}
+            <motion.a
+              href={`https://github.com/${selfData.socials_username.github}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
+              className="
+                w-12 h-12
+                flex items-center justify-center
+                rounded-xl
+                border border-primary/30
+                bg-card/40
+                backdrop-blur-md
+                text-primary
+                transition-all duration-300
+                hover:bg-primary/10
+                hover:border-primary/60
+                hover:shadow-[0_0_25px_rgba(var(--primary-rgb)/0.4)]
+              "
+              aria-label="GitHub"
             >
-              <Button
-                asChild
-                className="relative group overflow-hidden btn-primary shadow-lg hover:shadow-xl transition-all duration-300 h-12 px-6 text-sm"
-              >
-                <Link href="/resume">
-                  <motion.div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-30"
-                    style={{ background: "var(--glass-shimmer)" }}
-                    initial={{ x: "-100%" }}
-                    whileHover={{ x: "100%" }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
-                  />
-                  <span className="relative z-10 font-medium">Voir CV</span>
-                </Link>
-              </Button>
-            </motion.div>
+              <LuGithub size={22} />
+            </motion.a>
 
-            {/* Raccourcis */}
-            <motion.div
-              className="flex flex-wrap gap-3 justify-center"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.95 }}
+            {/* LinkedIn */}
+            <motion.a
+              href={`https://linkedin.com/in/${selfData.socials_username.linkedin}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.95 }}
+              className="
+                w-12 h-12
+                flex items-center justify-center
+                rounded-xl
+                border border-primary/30
+                bg-card/40
+                backdrop-blur-md
+                text-primary
+                transition-all duration-300
+                hover:bg-primary/10
+                hover:border-primary/60
+                hover:shadow-[0_0_25px_rgba(var(--primary-rgb)/0.4)]
+              "
+              aria-label="LinkedIn"
             >
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-                <Button
-                  asChild
-                  className="h-12 px-6 text-sm bg-card/30 border border-white/15 text-foreground/90 hover:bg-white/10 hover:border-white/25 transition-all duration-300 backdrop-blur-md"
-                >
-                  <a href="#experience" className="font-medium">
-                    Parcours
-                  </a>
-                </Button>
-              </motion.div>
-
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-                <Button
-                  asChild
-                  className="h-12 px-6 text-sm bg-card/30 border border-white/15 text-foreground/90 hover:bg-white/10 hover:border-white/25 transition-all duration-300 backdrop-blur-md"
-                >
-                  <a href="#projects" className="font-medium">
-                    Projets
-                  </a>
-                </Button>
-              </motion.div>
-
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-                <Button
-                  asChild
-                  className="h-12 px-6 text-sm bg-card/30 border border-white/15 text-foreground/90 hover:bg-white/10 hover:border-white/25 transition-all duration-300 backdrop-blur-md"
-                >
-                  <a href="#contact" className="font-medium">
-                    Contact
-                  </a>
-                </Button>
-              </motion.div>
-            </motion.div>
+              <LuLinkedin size={22} />
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>
