@@ -1,38 +1,17 @@
 const names = [
   "Racim Zenati",
   "Racim Zenati Portfolio",
-  "Aarabii",
   "Racim Zenati KIIT",
   "Racim Zenati Bhubaneswar",
 ];
 
 const roles = [
-  "Software Engineer",
-  "Full Stack Developer",
-  "Next.js Developer",
-  "Frontend Engineer",
-  "Backend Developer",
-  "Generative AI Engineer",
-  "Technical Content Engineer",
-  "Problem Setter",
-  "Student Developer",
-  "Creative Developer",
-  "UI/UX Engineer"
+  "IA Developer",
+  "Deep learning Engineer",
+  "ensimag student"
 ];
 
 const skills = [
-  // Web Frameworks & Libraries
-  "Next.js 15",
-  "React.js",
-  "React Server Components",
-  "TypeScript",
-  "Tailwind CSS",
-  "Framer Motion",
-  "Node.js",
-  "Express.js",
-  "Redux Toolkit",
-  "Zustand",
-
   // Database & Backend
   "PostgreSQL",
   "Supabase",
@@ -62,38 +41,24 @@ const projects = [
   "CppTestGenAI",
   "Orphia Music Generator",
   "Algo Visualizer Next.js",
-  "Bhagavad Gita API",
   "Sorting Algorithm Visualizer",
   "Portfolio Website Next.js",
   "AI Powered Application"
 ];
 
 const locations = [
-  "India",
-  "Delhi",
-  "NCR",
-  "Delhi NCR",
-  "Gurgaon",
-  "Bhubaneswar",
-  "Odisha",
-  "Bangalore",
+  "Grenoble",
+  "France",
   "Remote",
   "Worldwide"
 ];
 
 const longTail = [
-  "Hire Next.js Developer in India",
-  "Best Full Stack Developer Portfolio",
-  "React Developer for startup",
-  "Software Engineer Intern opportunities",
-  "Next.js 15 Portfolio Template",
-  "Generative AI Projects Showcase",
-  "Frontend Developer with AI skills",
-  "Freelance Web Developer India",
-  "Collaborate on Open Source",
-  "Technical Writer and Developer",
-  "Hackathon Winner Portfolio"
-];
+  "Racim Zenati IA Developer Portfolio",
+  "Racim Zenati Deep learning Engineer Resume",
+  "Hire Racim Zenati ensimag student",
+  "Racim Zenati Machine Learning Developer",
+  "Racim Zenati Ensimag student in Grenoble",];
 
 export const Keywords = [
   ...names,
