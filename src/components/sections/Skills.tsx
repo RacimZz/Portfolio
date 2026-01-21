@@ -40,7 +40,7 @@ const Marquee: FC<MarqueeProps> = ({ skills, direction }) => {
     return () => window.removeEventListener("resize", measureWidth);
   }, [skills]);
 
-  const speedFactor = 50;
+  const speedFactor = 80;
   const animationDuration = marqueeWidth > 0 ? marqueeWidth / speedFactor : 0;
 
   const animateX =
