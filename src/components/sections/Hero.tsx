@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 
 import { selfData } from "@/constant";
-import { quentine, mono } from "@/app/fonts";
+import { nasalization, quentine } from "@/app/fonts";
 
 import { LuGithub, LuLinkedin } from "react-icons/lu";
 
@@ -40,7 +40,7 @@ export const Hero = () => {
             </motion.h1>
 
             <motion.p
-              className={`${mono.className} text-lg md:text-xl`}
+              className={`${nasalization.className} text-lg md:text-xl`}
               style={{ color: "hsl(var(--secondary))" }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

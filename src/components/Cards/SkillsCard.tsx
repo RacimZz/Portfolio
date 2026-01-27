@@ -34,10 +34,18 @@ export const SkillCard = ({
       <motion.small
         whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        className="text-sm text-secondry font-semibold group-hover:text-primary-foreground/90"
+        className="
+          text-sm
+          font-semibold
+          text-white/90
+          transition-colors
+          duration-300
+          group-hover:text-white/90
+        "
       >
         {title}
       </motion.small>
+
     </motion.div>
   );
 };

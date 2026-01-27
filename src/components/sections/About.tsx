@@ -109,11 +109,16 @@ export const About = () => {
               {selfData.about.map((paragraph, index) => (
                 <motion.p
                   key={index}
-                  className="text-xs hover:text-primary-foreground transition-colors duration-200"
+                  className="
+                    text-xs
+                    text-white/90
+                    hover:text-white/90
+                    focus:text-white/90
+                    active:text-white/90
+                    transition-transform duration-200
+                  "
                   initial={{ opacity: 0, y: 15 }}
-                  animate={
-                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }
-                  }
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
                   transition={{
                     duration: 0.5,
                     delay: 0.6 + index * 0.1,
@@ -126,6 +131,7 @@ export const About = () => {
                 >
                   {paragraph}
                 </motion.p>
+
               ))}
             </motion.div>
 
