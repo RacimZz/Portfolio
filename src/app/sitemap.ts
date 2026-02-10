@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://racim-zenati.netlify.app";
+  const baseUrl = "https://racim-zenati.vercel.app";
   const lastModified = new Date();
 
   const sections = [

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "CV - Racim ZENATI",
     description:
       "View and download Racim ZENATI's professional resume featuring his experience and skills as a student developer.",
-    url: "https://racim-zenati.netlify.app/resume",
+    url: "https://racim-zenati.vercel.app/resume",
     siteName: "Racim ZENATI",
     images: [
       {

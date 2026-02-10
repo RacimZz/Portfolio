@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Racim ZENATI",
-      url: "https://racim-zenati.netlify.app",
+      url: "https://racim-zenati.vercel.app",
     },
   ],
   creator: "Racim ZENATI",
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
   category: "Portfolio",
   classification: "Etudiant à l'Ensimag",
   keywords: Keywords,
-  metadataBase: new URL("https://racim-zenati.netlify.app"),
+  metadataBase: new URL("https://racim-zenati.vercel.app"),
 
 
   alternates: {
-    canonical: "https://racim-zenati.netlify.app",
+    canonical: "https://racim-zenati.vercel.app",
     languages: {
-      "en-US": "https://racim-zenati.netlify.app",
+      "en-US": "https://racim-zenati.vercel.app",
     },
   },
   robots: {
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     title: "Racim ZENATI",
     description:
       "Explore Racim ZENATI’s portfolio featuring projects in Python, R, AI, and developer tools.",
-    url: "https://racim-zenati.netlify.app",
+    url: "https://racim-zenati.vercel.app",
     siteName: "Racim ZENATI",
     images: [
       {

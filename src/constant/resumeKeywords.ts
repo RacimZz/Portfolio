@@ -94,7 +94,7 @@ export const resumeKeywords = [
   "Docker",
   "CI/CD",
   "Vercel",
-  "Netlify",
+  "vercel",
 
   // Méthodologies
   "Agile",

@@ -8,10 +8,6 @@ import { BsSend, BsSendCheck } from "react-icons/bs";
 import { Card } from "../ui/card";
 
 export const ContactFormCard = () => {
-  console.log(
-    "WEB3FORMS KEY =",
-    process.env.NEXT_PUBLIC_WEB3FORMS_KEY
-  );
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
@@ -40,10 +36,10 @@ export const ContactFormCard = () => {
     // Honeypot: si rempli -> bot
     if (formValues.botField) return;
 
-    const key = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+    const key = process.env.NEXT_PUBLIC_WEB3FORMS_KEY?.trim();
     if (!key) {
       toast.error(
-        "Clé Web3Forms manquante. Ajoute NEXT_PUBLIC_WEB3FORMS_KEY dans .env.local puis relance npm run dev."
+        "Clé Web3Forms manquante. Ajoute NEXT_PUBLIC_WEB3FORMS_KEY dans Vercel (Project → Settings → Environment Variables), coche Preview + Production, puis redeploy."
       );
       return;
     }
@@ -74,10 +70,10 @@ export const ContactFormCard = () => {
 
     toast.promise(sendEmailPromise, {
       loading: "Envoi...",
-      success: "✅ Message envoyé ! Je te réponds rapidement.",
+      success: "✅ Message envoyé ! Je vous réponds rapidement.",
       error: (err) =>
         err?.message ||
-        "❌ Impossible d'envoyer. Réessaie ou contacte-moi via LinkedIn.",
+        "❌ Impossible d'envoyer. Réessayez ou contactez-moi via LinkedIn.",
     });
 
     try {

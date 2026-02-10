@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api", "/private"],
       },
     ],
-    sitemap: "https://racim-zenati.netlify.app/sitemap.xml",
+    sitemap: "https://racim-zenati.vercel.app/sitemap.xml",
   };
 }

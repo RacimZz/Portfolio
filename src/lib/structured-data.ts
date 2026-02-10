@@ -31,7 +31,7 @@ export function generatePersonStructuredData() {
       `https://github.com/${selfData.socials_username.github}`,
       `https://linkedin.com/in/${selfData.socials_username.linkedin}`,
     ],
-    url: "https://racim-zenati.netlify.app",
+    url: "https://racim-zenati.vercel.app",
     description: selfData.bio,
     knowsAbout: skills,
   };
@@ -42,7 +42,7 @@ export function generateWebsiteStructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Racim ZENATI - Portfolio",
-    url: "https://racim-zenati.netlify.app",
+    url: "https://racim-zenati.vercel.app",
     description:
       "Racim ZENATI's portfolio featuring projects.",
     author: {
@@ -67,8 +67,8 @@ export function generateOrganizationStructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: selfData.name,
-    url: "https://racim-zenati.netlify.app",
-    logo: "https://racim-zenati.netlify.app/images/logo.png",
+    url: "https://racim-zenati.vercel.app",
+    logo: "https://racim-zenati.vercel.app/images/logo.png",
     description: selfData.bio,
     founder: {
       "@type": "Person",
@@ -88,7 +88,7 @@ export function generateResumeStructuredData() {
     name: "Racim ZENATI CV",
     description:
       "Professional resume of Racim ZENATI",
-    url: "https://racim-zenati.netlify.app/resume",
+    url: "https://racim-zenati.vercel.app/resume",
     author: {
       "@type": "Person",
       name: selfData.name,
@@ -111,8 +111,8 @@ export function generateResumeStructuredData() {
     },
     dateModified: new Date().toISOString(),
     fileFormat: "application/pdf",
-    contentUrl: "https://racim-zenati.netlify.app/docs/Racim_Zenati_CV.pdf",
-    downloadUrl: "https://racim-zenati.netlify.app/docs/Racim_Zenati_CV.pdf",
+    contentUrl: "https://racim-zenati.vercel.app/docs/Racim_Zenati_CV.pdf",
+    downloadUrl: "https://racim-zenati.vercel.app/docs/Racim_Zenati_CV.pdf",
     keywords: [
       "IA Developer",
       "machine learning",

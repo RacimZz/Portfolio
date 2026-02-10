@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Désactiver ESLint et TypeScript pendant le build pour Netlify
+  // Désactiver ESLint et TypeScript pendant le build pour vercel
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "racim-zenati.netlify.app",
+        hostname: "racim-zenati.vercel.app",
         port: "",
         pathname: "/**",
       },
