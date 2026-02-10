@@ -1,39 +1,104 @@
 import type { NextConfig } from "next";
 
-const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
-const repo = "Portfolio"; // nom EXACT du repo GitHub
-
 const nextConfig: NextConfig = {
-  // 1) Export statique -> génère un dossier /out après `next build`
-  output: "export", // requis pour GitHub Pages [page:0]
-
-  // 2) GitHub Pages sert ton site sous /Portfolio/
-  ...(isGitHubPages
-    ? {
-        basePath: `/${repo}`,
-        assetPrefix: `/${repo}/`,
-      }
-    : {}),
-
-  // 3) Image optimization par défaut nécessite un serveur -> désactiver
-  images: {
-    unoptimized: true, // sinon ça casse sur GitHub Pages [page:0]
+  // Désactiver ESLint et TypeScript pendant le build pour Netlify
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
 
-  // Optionnel : tu peux garder compress/experimental si tu veux
+  images: {
+    unoptimized: false,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "racim-zenati.netlify.app",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
+
   compress: true,
+
   experimental: {
     optimizeCss: true,
   },
 
-  // 4) À SUPPRIMER pour GitHub Pages static export :
-  // headers() et redirects() ne sont pas supportés [page:0]
-  // async headers() { ... }
-  // async redirects() { ... }
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "origin-when-cross-origin",
+          },
+          {
+            key: "X-Robots-Tag",
+            value: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+          },
+        ],
+      },
+      {
+        source: "/docs/:path*",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
+          },
+          {
+            key: "Content-Type",
+            value: "application/pdf",
+          },
+          {
+            key: "Content-Disposition",
+            value: "inline",
+          },
+        ],
+      },
+    ];
+  },
 
-  // 5) Tu peux laisser ces flags (mais idéalement corriger tes erreurs plutôt que les ignorer)
-  eslint: { ignoreDuringBuilds: true }, // présent chez toi [file:64]
-  typescript: { ignoreBuildErrors: true }, // présent chez toi [file:64]
+  async redirects() {
+    return [
+      {
+        source: "/home",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/email",
+        destination: "mailto:racimzenati.pro@gmail.com",
+        permanent: true,
+      },
+      {
+        source: "/directresume",
+        destination: "/docs/Racim_Zenati_CV.pdf",
+        permanent: true,
+      },
+      {
+        source: "/direct-resume",
+        destination: "/docs/Racim_Zenati_CV.pdf",
+        permanent: true,
+      },
+      {
+        source: "/github",
+        destination: "https://www.github.com/racimzz",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
