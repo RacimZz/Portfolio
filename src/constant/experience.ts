@@ -16,6 +16,7 @@ export const experienceData = [
       "Projet de recherche à l’IPAG (UGA) autour de la classification de spectres de galaxies.",
       "Standardisation optimisée + algorithme statistique sous R (FisherEM), exécuté sur un cluster de calcul.",
       "Objectif : affiner l’analyse de propriétés physiques à partir des signatures spectrales.",
+      "Résultats disponibles sur le rapport de stage disponible sur mon Github.",
     ],
     company: "Institut de Planétologie et d’Astrophysique de Grenoble (IPAG)",
     technologies: ["R", "Clustering", "HPC"],
