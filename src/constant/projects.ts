@@ -24,6 +24,14 @@ export const projectsData = [
     tech: ["Python", "Gradio", "Wikipedia API", "Google Gemini API", "dotenv"],
   },
   {
+    name: "Système de détection d’intrusions pour attaques de type password spraying",
+    description:
+      "Ce projet explore la détection d’attaques de password spraying à l’aide d’une approche de machine learning comportementale.",
+    github_link: "https://github.com/RacimZz/pswrd_spray",
+    Sujet: "https://www.keepersecurity.com/fr_FR/threats/password-spraying-attack/",
+    tech: ["Python", "pandas", "joblib", "scikit-learn"],
+  },
+  {
     name: "Tetravex-SAT Solver",
     description:
       "Solveur de Tetravex en formulant le problème en SAT (CNF) puis en résolvant/visualisant la solution. — OCaml, C, Python, Pygame, DIMACS CNF.",
