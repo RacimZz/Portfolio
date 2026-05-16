@@ -1,5 +1,15 @@
 export const experienceData = [
   {
+    role: "Stage Assistant Ingénieur : Réalité Augmentée pour un Dispositif Médical innovant",
+    year: "Mai 2026 — Aout 2025",
+    description: [
+      "Contribution au développement d'un dispositif médical en réalité augmentée : robustesse de la chaîne casque AR ↔ application embarquée ↔ dispositif médical, visualisation dynamique de données et manipulation 3D. Définition des exigences techniques, benchmark des casques AR et proposition d'une architecture matérielle et logicielle.",
+    ],
+    company: "Dental Hologram",
+    technologies: ["C#", "Unity", "Réalité Augmentée", "Dispositif Médical"],
+    url: "https://www.dental-hologram.com/",
+  },
+  {
     role: "Première année — Cycle ingénieur",
     year: "Sep 2025 — Présent",
     description: [
