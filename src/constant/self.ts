@@ -19,10 +19,10 @@ export const selfData = {
   ],
 
   desc: "Je conçois et développe des projets allant du logiciel à l'IA.",
-  bio: "Salut ! Je suis Racim, étudiant en 1ère année du cycle ingénieur à l’ENSIMAG, Je suis actuellement à la recherche d'un stage de 3 mois et d’une alternance de 2 ans en IA ou en cybersecurité et prêt à m’investir pleinement dans de nouveaux projets !",
+  bio: "Salut ! Je suis Racim, étudiant en 1ère année du cycle ingénieur à l’ENSIMAG, Je suis actuellement à la recherche d’une alternance de 2 ans en IA et prêt à m’investir pleinement dans de nouveaux projets !",
   about: [
   "Je suis étudiant ingénieur à l’ENSIMAG, passionné par l’intelligence artificielle, la data science et les systèmes informatiques.",
-  "J’ai réalisé deux stages d’excellence en laboratoires de recherche, autour de la classification non supervisée de spectres de galaxies (machine learning, statistiques, calcul haute performance) et du développement d’outils avancés de modélisation 3D en réalité virtuelle.",
+  "J’ai réalisé deux stages d’excellence en laboratoires de recherche ainsi qu'un stage d'assistant ingénieur chez Dental Hologram, les 2 stages de recherche étaient autour de la classification non supervisée de spectres de galaxies (machine learning, statistiques, calcul haute performance) et du développement d’outils avancés de modélisation 3D en réalité virtuelle.",
   "En parallèle, j’ai mené de nombreux projets académiques et personnels en IA, analyse de données, programmation logicielle et développement applicatif, et je recherche actuellement un stage de 3 mois et une alternance de 2 ans pour continuer à approfondir ces domaines au sein de projets ambitieux.",
   ],
 
