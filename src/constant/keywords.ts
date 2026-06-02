@@ -1,65 +1,82 @@
 const names = [
   "Racim Zenati",
   "Racim Zenati Portfolio",
-  "Racim Zenati KIIT",
-  "Racim Zenati Bhubaneswar",
 ];
 
 const roles = [
-  "IA Developer",
-  "Deep learning Engineer",
-  "ensimag student"
+  "AI Engineer",
+  "Machine Learning Engineer",
+  "Deep Learning Engineer",
+  "AI Apprentice",
+  "ENSIMAG Student",
+  "Software Engineer",
 ];
 
 const skills = [
-  // Database & Backend
-  "PostgreSQL",
-  "Supabase",
-  "MongoDB",
-  "Prisma ORM",
-  "GraphQL",
-  "REST API",
-  "Serverless Functions",
-  "Edge Runtime",
+  // Languages
+  "Python",
+  "C",
+  "C++",
+  "OCaml",
+  "Bash",
+  "SQL",
 
-  // AI & Systems
+  // AI & Machine Learning
   "Machine Learning",
+  "Deep Learning",
+  "Neural Networks",
+  "PyTorch",
+  "TensorFlow",
+  "Keras",
+  "Scikit-learn",
+  "NumPy",
+  "Pandas",
+  "NLP",
   "LLM Integration",
-  "Ollama",
-  "RAG Pipelines",
-  "LangChain",
-  "Vector Databases",
-  "C++ Optimization",
-  "Python Automation",
-  "Docker",
-  "Kubernetes",
-  "CI/CD Pipelines",
-  "Git & GitHub"
+
+  // Systems & Low-level
+  "ARM Assembly",
+  "RISC-V",
+  "SAT Solvers",
+
+  // Data
+  "Data Analysis",
+  "Unsupervised Classification",
+  "Statistical Modeling",
+
+  // XR & 3D
+  "Unity3D",
+  "XR Toolkit",
+  "Virtual Reality",
+  "Augmented Reality",
+  "Rhino 8",
+
+  // Tools
+  "Git",
+  "Linux",
 ];
 
 const projects = [
-  "CppTestGenAI",
-  "Orphia Music Generator",
-  "Algo Visualizer Next.js",
-  "Sorting Algorithm Visualizer",
-  "Portfolio Website Next.js",
-  "AI Powered Application"
+  "Racim Zenati Portfolio",
+  "Racim Zenati AI Projects",
+  "Galaxy Spectra Classification",
+  "VR Modeling Plugin",
+  "Augmented Reality Medical Device",
+  "Akinator AI",
+  "Password Spraying Detection",
 ];
 
 const locations = [
   "Grenoble",
   "France",
-  "Remote",
-  "Worldwide"
 ];
 
 const longTail = [
-  "Racim Zenati IA Developer Portfolio",
-  "Racim Zenati Deep learning Engineer Resume",
-  "Hire Racim Zenati ensimag student",
-  "Racim Zenati Machine Learning Developer",
-  "Racim Zenati Ensimag student in Grenoble",];
-
+  "Racim Zenati AI Engineer Portfolio",
+  "Racim Zenati ENSIMAG Student",
+  "Racim Zenati Machine Learning Apprentice",
+  "AI Engineering Apprentice Grenoble",
+];
 export const Keywords = [
   ...names,
   ...roles,
