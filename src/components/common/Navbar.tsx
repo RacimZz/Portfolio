@@ -48,9 +48,9 @@ export const Navbar = () => {
   }, [isScrolled, isVisible]);
 
   const navLinks = [
-    { label: "À propos", href: "#about" },
-    { label: "Parcours", href: "#experience" }, 
-    { label: "Projets", href: "#projects" },
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" }, 
+    { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
   ];
 
