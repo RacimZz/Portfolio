@@ -7,7 +7,7 @@ const roles = [
   "AI Engineer",
   "Machine Learning Engineer",
   "Deep Learning Engineer",
-  "AI Apprentice",
+  "Research Intern",
   "ENSIMAG Student",
   "Software Engineer",
 ];
@@ -17,53 +17,56 @@ const skills = [
   "Python",
   "C",
   "C++",
+  "C#",
   "OCaml",
+  "Go",
+  "Kotlin",
+  "R",
   "Bash",
   "SQL",
-
   // AI & Machine Learning
   "Machine Learning",
   "Deep Learning",
   "Neural Networks",
   "PyTorch",
   "TensorFlow",
-  "Keras",
   "Scikit-learn",
   "NumPy",
   "Pandas",
   "NLP",
-  "LLM Integration",
-
+  "Computer Vision",
   // Systems & Low-level
   "ARM Assembly",
-  "RISC-V",
   "SAT Solvers",
-
-  // Data
+  "Embedded Systems",
+  // Data & Research
   "Data Analysis",
   "Unsupervised Classification",
   "Statistical Modeling",
-
+  "Scientific Computing",
+  "High Performance Computing",
   // XR & 3D
   "Unity3D",
   "XR Toolkit",
   "Virtual Reality",
   "Augmented Reality",
   "Rhino 8",
-
   // Tools
   "Git",
   "Linux",
+  "Qt",
+  "LaTeX",
 ];
 
 const projects = [
   "Racim Zenati Portfolio",
   "Racim Zenati AI Projects",
   "Galaxy Spectra Classification",
+  "Fisher-EM Clustering",
   "VR Modeling Plugin",
   "Augmented Reality Medical Device",
-  "Akinator AI",
   "Password Spraying Detection",
+  "Tetravex SAT Solver",
 ];
 
 const locations = [
@@ -74,9 +77,11 @@ const locations = [
 const longTail = [
   "Racim Zenati AI Engineer Portfolio",
   "Racim Zenati ENSIMAG Student",
-  "Racim Zenati Machine Learning Apprentice",
-  "AI Engineering Apprentice Grenoble",
+  "Racim Zenati Machine Learning",
+  "Double Degree Engineering and MSc in AI",
+  "AI Research Internship Grenoble",
 ];
+
 export const Keywords = [
   ...names,
   ...roles,
@@ -84,9 +89,5 @@ export const Keywords = [
   ...projects,
   ...locations,
   ...longTail,
-
-  ...roles.flatMap((role) => locations.map((loc) => `${role} in ${loc}`)),
-  ...skills.map((skill) => `${skill} Developer`),
-  ...skills.map((skill) => `${skill} Expert`),
-  ...skills.map((skill) => `Hire ${skill} Developer`),
+  ...roles.map((role) => `${role} Grenoble`),
 ];
