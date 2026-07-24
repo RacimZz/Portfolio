@@ -1,127 +1,104 @@
 export const projectsData = [
   {
-    name: "Modelisation Rhino avec IHM en VR",
+    name: "Rhino 3D Modeling with a VR Interface",
     description:
-      "Plugin/prototype reliant Rhino à Unity pour manipuler et visualiser des modèles 3D en réalité virtuelle via une IHM interactive. — C#, Python, Unity(Unity3D, XR Toolkit), Rhino 8, Websockets.",
+      "Plugin connecting Rhino to Unity for manipulating and visualizing 3D models in virtual reality through an interactive interface, with real-time synchronization between both environments.",
     github_link: "https://github.com/RacimZz/Rhino-VR",
     Sujet: "https://drive.google.com/drive/folders/1dvyUFiwMuhgVZudEV7qf73dHN3fY7AeW?usp=drive_link",
-    tech: ["C#", "Python", "Unity", "XR Toolkit", "Rhino 8", "Websockets"],
+    tech: ["C#", "Python", "Unity", "XR Toolkit", "Rhino 8", "WebSockets"],
   },
   {
     name: "ChatBot",
     description:
-      "Application web de chatbot qui orchestre des appels LLM et gère la configuration via variables d’environnement. — Python, Flask, Google Gemini API, OpenAI Transformers, dotenv.",
+      "Web-based chatbot orchestrating LLM API calls, with environment-based configuration management and a lightweight Flask backend.",
     github_link: "https://github.com/RacimZz/Chatbot",
     Sujet: "https://ai.google.dev/gemini-api/docs/models/gemini?hl=fr#gemini-1.5-flash",
-    tech: ["Python", "Flask", "Google Gemini API", "OpenAI Transformers", "dotenv"],
+    tech: ["Python", "Flask", "Google Gemini API", "Transformers", "dotenv"],
   },
   {
     name: "AI-Powered Celebrity Guesser",
     description:
-      "Jeu type Akinator qui devine une célébrité en posant des questions et en enrichissant le contexte via des sources en ligne. — Python, Gradio, Wikipedia API, Google Gemini API, dotenv.",
+      "Akinator-style game that identifies a celebrity through iterative questioning, enriching its context with external knowledge sources at inference time.",
     github_link: "https://github.com/RacimZz/Akinator_IA",
     Sujet: "https://ai.google.dev/gemini-api/docs/models/gemini?hl=fr#gemini-1.5-flash",
     tech: ["Python", "Gradio", "Wikipedia API", "Google Gemini API", "dotenv"],
   },
   {
-    name: "Système de détection d’intrusions pour attaques de type password spraying",
+    name: "Password Spraying Intrusion Detection System",
     description:
-      "Ce projet explore la détection d’attaques de password spraying à l’aide d’une approche de machine learning comportementale.",
+      "Detection of password spraying attacks through behavioral machine learning, using anomaly detection on authentication patterns.",
     github_link: "https://github.com/RacimZz/pswrd_spray",
     Sujet: "https://www.keepersecurity.com/fr_FR/threats/password-spraying-attack/",
     tech: ["Python", "pandas", "joblib", "scikit-learn"],
   },
   {
-    name: "Tetravex-SAT Solver",
+    name: "Tetravex SAT Solver",
     description:
-      "Solveur de Tetravex en formulant le problème en SAT (CNF) puis en résolvant/visualisant la solution. — OCaml, C, Python, Pygame, DIMACS CNF.",
+      "Automated Tetravex solver encoding the puzzle into a SAT instance (CNF), then solving and visualizing the result.",
     github_link: "https://github.com/RacimZz/CNF_SAT",
     Sujet: "https://drive.google.com/file/d/1N2bNN1DUwovy0mzkWGgq-F2EeJnlyB3I/view?usp=drive_link",
     tech: ["OCaml", "C", "Python", "Pygame", "DIMACS CNF"],
   },
   {
-    name: "Interpréteur ARM",
+    name: "ARM Interpreter",
     description:
-      "Interpréteur d’un sous-ensemble d’instructions ARM basé sur une représentation AST et un pipeline de build automatisé. — C, Assembleur (ARM), AST, Makefile.",
+      "Interpreter for a subset of the ARM instruction set, based on an AST representation with an automated build pipeline.",
     github_link: "https://github.com/RacimZz/ARM_Interpreter",
     Sujet: "https://developer.arm.com/documentation/101458/2404/Get-started/Arm-C-C---Compiler",
-    tech: ["C", "Assembleur", "ARM", "AST", "Makefile"],
+    tech: ["C", "ARM Assembly", "AST", "Makefile"],
   },
   {
-    name: "Automate probabiliste de l’électeur (analyse Markovienne + simulations 1D/2D)",
+    name: "Probabilistic Voter Model — Markov Analysis and 1D/2D Simulations",
     description:
-      "Étude/simulations d’un modèle de vote probabiliste avec analyse markovienne et expériences Monte‑Carlo en 1D/2D. — Python, LaTeX (Beamer), Chaînes de Markov, Automates cellulaires probabilistes, Simulations Monte-Carlo.",
+      "Study of a probabilistic voting model combining Markov chain analysis with Monte Carlo simulations in one and two dimensions.",
     github_link: "https://github.com/RacimZz/probabilistic-voter-model",
     Sujet: "https://github.com/RacimZz/probabilistic-voter-model/blob/main/sujet-automate.pdf",
-    tech: ["Python", "LaTeX", "Beamer", "Chaînes de Markov", "Automates cellulaires probabilistes", "Simulations Monte-Carlo"],
+    tech: ["Python", "LaTeX", "Beamer", "Markov Chains", "Probabilistic Cellular Automata", "Monte Carlo"],
   },
   {
-    name: "Classification spectrale non supervisée",
+    name: "Unsupervised Spectral Classification",
     description:
-      "Pipeline de clustering non supervisé de spectres avec exécution sur cluster et automatisation shell. — R, FisherEM, bash, clusters de calculs.",
+      "Unsupervised clustering pipeline for galaxy spectra using the Fisher-EM algorithm, executed on a computing cluster with shell-based automation.",
     github_link: "https://github.com/RacimZz/FisherEM_ML",
     Sujet: "https://drive.google.com/file/d/1MmdLHnPcUQzCMysXC_RngB3rsTBKuE_D/view?usp=drive_link",
-    tech: ["R", "FisherEM", "bash", "HPC"],
+    tech: ["R", "Fisher-EM", "Bash", "HPC"],
   },
   {
-    name: "GEMINI : une approche neuronale pour le clustering de spectres – Analyse et visualisations",
+    name: "GEMINI — Neural Approach to Spectral Clustering",
     description:
-      "Expérimentations de clustering neuronal de spectres avec scripts d’analyse, logs JSON et exécution HPC. — Python (Gemclus Package), bash, Json, clusters de calculs.",
+      "Experiments on neural clustering of galaxy spectra, with analysis scripts, structured logging and execution on HPC infrastructure.",
     github_link: "https://github.com/RacimZz/Gemclus_DeepLearning",
     Sujet: "https://drive.google.com/file/d/1MmdLHnPcUQzCMysXC_RngB3rsTBKuE_D/view?usp=drive_link",
-    tech: ["Python", "Gemclus Package", "bash", "Json", "HPC"],
+    tech: ["Python", "GemClus", "Bash", "JSON", "HPC"],
   },
   {
-    name: "Calculatrice en syntaxe infixe – Parser LL(1) avec grammaire attribuée et rattrapage d’erreurs",
+    name: "Infix Calculator — LL(1) Parser with Attribute Grammar",
     description:
-      "Calculatrice qui parse des expressions infixes avec un analyseur LL(1), grammaire attribuée et récupération d’erreurs. — Python, Théorie des Langages, Analyse LL(1), Grammaire Attribuée, Panic-Mode Error Recovery.",
+      "Calculator parsing infix expressions through an LL(1) analyzer, with an attribute grammar and panic-mode error recovery.",
     github_link: "https://github.com/RacimZz/TL",
     Sujet: "https://drive.google.com/file/d/1YtKbj1qFuOmU0uowhAGUkYCdAtuvUzwj/view?usp=drive_link",
-    tech: ["Python", "Théorie des Langages", "Analyse LL(1)", "Grammaire Attribuée", "Panic-Mode Error Recovery"],
+    tech: ["Python", "Formal Languages", "LL(1) Parsing", "Attribute Grammar", "Error Recovery"],
   },
   {
-    name: "Générateur de mots de passe sécurisé",
+    name: "Chinese Checkers in OCaml",
     description:
-      "Outil GUI pour générer des mots de passe robustes avec paramètres de complexité. — Python, Tkinter.",
-    github_link: "https://github.com/RacimZz/random_password",
-    Sujet: "https://www.mathweb.fr/euclide/2020/12/12/generateur-de-mots-de-passe-en-python/",
-    tech: ["Python", "Tkinter"],
-  },
-  {
-    name: "OCaml : Dames chinoises",
-    description:
-      "Implémentation du jeu de dames chinoises (logique + règles) en OCaml. — OCaml.",
+      "Full implementation of Chinese Checkers in OCaml, covering game logic, rule enforcement and move validation.",
     github_link: "https://github.com/RacimZz/OCAML_project",
     Sujet: "https://drive.google.com/file/d/11N2cGvesSMDWV4-cmkNjecEpGCIk_GKj/view?usp=drive_link",
     tech: ["OCaml"],
   },
   {
-    name: "ProjectCOW",
+    name: "Image Transformation and Edge Detection via Differential Models",
     description:
-      "Projet système mêlant C et scripts shell pour automatiser/expérimenter des fonctionnalités bas niveau. — C, Shell.",
-    github_link: "https://github.com/RacimZz/ProjectCOW",
-    tech: ["C", "Shell"],
-  },
-  {
-    name: "Tours de Hanoie",
-    description:
-      "Visualisation interactive du problème des tours de Hanoï avec interface graphique. — Python (turtle, Tkinter).",
-    github_link: "https://github.com/RacimZz/Hanoie_tower",
-    Sujet: "https://drive.google.com/file/d/1QGO5sBPu-g3IbTLPohbZWFjj2jbrtRJ7/view?usp=drive_link",
-    tech: ["Python", "turtle", "Tkinter"],
-  },
-  {
-    name: "Transformation et Détection de Contours via Modèles Différentiels",
-    description:
-      "Traitement d’images : transformations et détection de contours via modèles différentiels et analyse numérique. — Python, NumPy, SciPy, Matplotlib.",
+      "Image processing pipeline applying differential models and numerical analysis for geometric transformations and edge detection.",
     github_link: "https://github.com/RacimZz/traitement_image",
     Sujet: "https://drive.google.com/drive/folders/1CvVgse207-Avk4UTIHCDsI7BJjbXzEvu?usp=drive_link",
     tech: ["Python", "NumPy", "SciPy", "Matplotlib"],
   },
   {
-    name: "Détection de Fraude Documentaire",
+    name: "Document Fraud Detection",
     description:
-      "Détection d’anomalies/fraudes sur documents par OCR, vision par ordinateur et modèles ML. — Python, OpenCV, Tesseract, scikit-learn, TensorFlow.",
+      "Detection of document forgery through OCR, computer vision and machine learning models applied to anomaly identification.",
     github_link: "https://github.com/RacimZz/Detection_de_fraude",
     Sujet: "https://sites.google.com/view/aide-python/applications/traitements-et-analyses-dimages",
     tech: ["Python", "OpenCV", "Tesseract", "scikit-learn", "TensorFlow"],
