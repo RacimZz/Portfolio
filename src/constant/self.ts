@@ -2,31 +2,27 @@ export const selfData = {
   name: "Racim ZENATI",
   first_name: "Racim",
   last_name: "ZENATI",
-  jobTitle: "Étudiant ingénieur",
+  jobTitle: "Engineering Student",
   workFor: "INP – ENSIMAG",
   current_location: {
-    city: "Grenoble / Saint-Martin-d’Hères",
+    city: "Grenoble / Saint-Martin-d'Hères",
     state: "Auvergne-Rhône-Alpes",
     country: "France",
   },
   email: "racimzenati.pro@gmail.com",
-
-  // La première entrée est affichée dans le Hero
+  // The first entry is displayed in the Hero
   roles: [
-    "Étudiant ingénieur (ENSIMAG)",
-    "Recherche & IA",
-    "Développement logiciel",
+    "Engineering Student (ENSIMAG)",
+    "Machine Learning & Research",
+    "Software Development",
   ],
-
-  desc: "Je conçois et développe des projets allant du logiciel à l'IA.",
-  bio: "Salut ! Je suis Racim, étudiant en 1ère année du cycle ingénieur à l’ENSIMAG, Je suis actuellement à la recherche d’une alternance de 2 ans en IA et prêt à m’investir pleinement dans de nouveaux projets !",
+  desc: "I design and build projects, from software to applied AI.",
+  bio: "Hi! I'm Racim, an engineering student at ENSIMAG pursuing a double degree in Engineering and a Master in Artificial Intelligence. I'm currently looking for a research or engineering internship in AI for Summer 2027.",
   about: [
-  "Je suis étudiant ingénieur à l’ENSIMAG, passionné par l’intelligence artificielle, la data science et les systèmes informatiques.",
-  "J’ai réalisé deux stages d’excellence en laboratoires de recherche ainsi qu'un stage d'assistant ingénieur chez Dental Hologram, les 2 stages de recherche étaient autour de la classification non supervisée de spectres de galaxies (machine learning, statistiques, calcul haute performance) et du développement d’outils avancés de modélisation 3D en réalité virtuelle.",
-  "En parallèle, j’ai mené de nombreux projets académiques et personnels en IA, analyse de données, programmation logicielle et développement applicatif, et je recherche actuellement un stage de 3 mois et une alternance de 2 ans pour continuer à approfondir ces domaines au sein de projets ambitieux.",
+    "I'm an engineering student at ENSIMAG, pursuing a double degree in Engineering and a Master in Artificial Intelligence, with a focus on applied machine learning, data science and computer systems.",
+    "I completed two excellence research internships and an engineering internship at Dental Hologram. My research work covered unsupervised classification of galaxy spectra (machine learning, statistics, high-performance computing) at IPAG, and the development of advanced 3D modeling tools in virtual reality at G-SCOP.",
+    "Alongside my studies, I've worked on a range of academic and personal projects in AI, data analysis and software development. I'm currently looking for a research or engineering internship in AI for Summer 2027.",
   ],
-
-
   socials_username: {
     github: "RacimZz",
     linkedin: "racim-zenati",
