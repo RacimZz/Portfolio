@@ -26,7 +26,7 @@ export const Projects = () => {
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Projets
+            Projects
           </motion.h2>
         </motion.div>
 

@@ -88,7 +88,7 @@ export const Skills = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Compétences
+            Skills
           </motion.h2>
         </div>
 

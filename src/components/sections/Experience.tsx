@@ -37,7 +37,7 @@ export function Experience() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Parcours
+            Experience
           </motion.h2>
         </motion.div>
 

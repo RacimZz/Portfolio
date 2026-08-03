@@ -183,7 +183,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
                 >
                   <Link href={Sujet} target="_blank" rel="noopener noreferrer">
                     <FiExternalLink className="w-4 h-4 mr-2" />
-                    Sujet
+                    Reference
                   </Link>
                 </Button>
               </motion.div>
